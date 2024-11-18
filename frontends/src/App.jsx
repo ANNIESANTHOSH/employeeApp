@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Navbar from './components/Navbar'
 import Add from './components/Add'
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,8 +16,9 @@ function App() {
     <>
        <Routes>
        <Route path='/' element={<Login/>}></Route>
+       {/* <Route element={<PrivateRoute/>}/> */}
       <Route path='/home' element={<><Navbar /><Home/></>}></Route>
-      <Route path='/add'element={<><Navbar /><Add/></>}></Route>
+      <Route path='/add'element={<><Navbar /><Add/></>}></Route><Route/>
        </Routes>
     </>
   )
